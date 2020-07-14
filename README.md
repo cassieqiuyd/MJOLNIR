@@ -1,6 +1,6 @@
 # Target Driven Visual Navigation
 
-### [Project](https://sites.google.com/eng.ucsd.edu/mjolnir) | [Paper](https://arxiv.org/pdf/2003.06749.pdf) | [Video](https://www.youtube.com/watch?v=aEbXjGZDZSQ)  <br>
+### [Project](https://sites.google.com/eng.ucsd.edu/mjolnir) | [Paper](https://arxiv.org/pdf/2003.06749.pdf) | [Video]()  <br>
 PyTorch implementation of our paper on target driven visual navigation in Ai2Thor environment. This implementation is modified based on [Learning to Learn how to Learn: Self-Adaptive Visual Navigation using Meta-Learning](https://github.com/allenai/savn)
 
 
