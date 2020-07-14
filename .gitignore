@@ -1,0 +1,6 @@
+.DS_Store
+data/thor_offline_data
+data/thor_v1_offline_data
+runs/
+*.pyc
+.idea/
