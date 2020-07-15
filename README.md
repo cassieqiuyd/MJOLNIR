@@ -15,7 +15,7 @@ PyTorch implementation of our paper on target driven visual navigation in Ai2Tho
 
 ## Data
 
-1. Pretrained models can be found [here]https://drive.google.com/drive/folders/1dHLbmKgVuDLoIPMb5V0lNFc17GWMvyFq?usp=sharing).
+1. Pretrained models can be found [here](https://drive.google.com/drive/folders/1dHLbmKgVuDLoIPMb5V0lNFc17GWMvyFq?usp=sharing).
 
 2. data: The data can be found [here](https://drive.google.com/drive/folders/1TNkjWVDbagTgFalvHrwR_TbH3YG9GMhM?usp=sharing).
 
@@ -48,13 +48,13 @@ python main.py \
 cat random_results.json
 ```
 
-#### Trained model
+#### full evaluation
 ```bash
 python full_eval.py \
     --title mjolnir \
     --model mjolnir_o \
     --results_json mjolnir_o.json \
-    --gpu-ids 0 1
+    --gpu-ids 0
     
 cat mjolnir_o.json
 ```
