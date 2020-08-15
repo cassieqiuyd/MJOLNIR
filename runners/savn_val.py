@@ -35,7 +35,6 @@ def savn_val(
 
     glove = Glove(args.glove_file)
     scenes, possible_targets, targets, rooms = get_data(args.scene_types, args.val_scenes)
-    print(rooms)
     num = 0 # name_to_num(scene_type)
     scenes = scenes[num]
     targets = targets[num]

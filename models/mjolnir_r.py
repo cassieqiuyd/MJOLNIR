@@ -21,16 +21,15 @@ def normalize_adj(adj):
     d_inv_sqrt[np.isinf(d_inv_sqrt)] = 0.0
     d_mat_inv_sqrt = sp.diags(d_inv_sqrt)
     return adj.dot(d_mat_inv_sqrt).transpose().dot(d_mat_inv_sqrt).tocoo()
-        #(d_mat_inv_sqrt @ adj @ d_mat_inv_sqrt).tocoo()
 
 
-class KGVN2(torch.nn.Module):
+class MJOLNIR_R(torch.nn.Module):
     def __init__(self, args):
         action_space = args.action_space
         target_embedding_sz = args.glove_dim
         resnet_embedding_sz = 512
         hidden_state_sz = args.hidden_state_sz
-        super(KGVN2, self).__init__()
+        super(MJOLNIR_R, self).__init__()
 
         self.conv1 = nn.Conv2d(resnet_embedding_sz, 64, 1)
         self.maxp1 = nn.MaxPool2d(2, 2)
@@ -71,6 +70,7 @@ class KGVN2(torch.nn.Module):
 
 
         # get and normalize adjacency matrix.
+        np.seterr(divide='ignore')
         A_raw = torch.load("./data/gcn/adjmat.dat")
         A = normalize_adj(A_raw).tocsr().toarray()
         self.A = torch.nn.Parameter(torch.Tensor(A))

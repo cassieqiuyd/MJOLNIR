@@ -1,6 +1,5 @@
 # Target Driven Visual Navigation
 
-### [Project](https://sites.google.com/eng.ucsd.edu/mjolnir) | [Paper](https://arxiv.org/pdf/2003.06749.pdf) | [Video]()  <br>
 PyTorch implementation of our paper on target driven visual navigation in Ai2Thor environment. This implementation is modified based on [Learning to Learn how to Learn: Self-Adaptive Visual Navigation using Meta-Learning](https://github.com/allenai/savn)
 
 
@@ -15,11 +14,9 @@ PyTorch implementation of our paper on target driven visual navigation in Ai2Tho
 
 ## Data
 
-1. Pretrained models can be found [here](https://drive.google.com/drive/folders/1dHLbmKgVuDLoIPMb5V0lNFc17GWMvyFq?usp=sharing).
+The data can be found [here](https://drive.google.com/drive/folders/1TNkjWVDbagTgFalvHrwR_TbH3YG9GMhM?usp=sharing).(~ GB)
 
-2. data: The data can be found [here](https://drive.google.com/drive/folders/1TNkjWVDbagTgFalvHrwR_TbH3YG9GMhM?usp=sharing).
-
-Please update the locations accordingly in the config file.
+Please unzip it and put the data folder into the MJOLNIR folder.
 
 ## Evaluation
 
@@ -28,9 +25,9 @@ Please update the locations accordingly in the config file.
 python main.py --eval \
     --test_or_val test \
     --episode_type TestValEpisode \
-    --load_model final_models/mjolnir_o_pre.dat \
+    --load_model pretrained_models/mjolnir_o_pretrain.dat \
     --model mjolnir_o \
-    --results_json mjolnir_o.json 
+    --results_json mjolnir_o.json
 
 cat mjolnir_o.json 
 ```
@@ -68,6 +65,15 @@ python main.py \
     --gpu-ids 0\
     --workers 8
 ```
+
+## Visualization
+
+go to visualization folder. If you did evaluation, the action log should be generated. 
+
+```bash
+python visualization.py --actionList ../saved_action_mjolnir_o_test.log
+```
+
 
 ## Cite
 

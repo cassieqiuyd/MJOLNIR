@@ -130,9 +130,6 @@ class ThorAgent:
 
         if self.verbose:
             print(self.episode.actions_list[action])
-        if self.vis:
-            with open('saved_action'+ self.results_json, "w") as fp:
-                json.dump(self.episode.actions_list[action], fp)
         self.probs.append(prob)
         self.entropies.append(entropy)
         self.values.append(out.value)

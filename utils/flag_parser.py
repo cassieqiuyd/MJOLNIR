@@ -274,17 +274,12 @@ def parse_arguments():
     )
 
 
-    parser.add_argument("--test_or_val", default="val", help="test or val")
-
+    parser.add_argument("--test_or_val", default="test", help="test or val")
     parser.add_argument("--partial_reward", default=True, help="using partial reward for parent objects")
-
-    parser.add_argument("--vis",default=False)
-
+    parser.add_argument("--vis",default=True, help="whether to store action log for visualization")
     parser.add_argument("--room_results", default=False, help="whether to save results room-wise during evaluation")
-
     args = parser.parse_args()
 
-    #args.glove_file = "{}/glove_map{}d.hdf5".format(args.glove_dir, args.glove_dim)
     args.glove_file = args.glove_dir
-    #args.glove_file = "{}/glove_thorv1_300_augment.hdf5".format(args.glove_dir)
+
     return args

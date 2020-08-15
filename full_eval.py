@@ -20,26 +20,13 @@ def main():
     init_agent = agent_class(args.agent_type)
 
     args.episode_type = "TestValEpisode"
-    args.test_or_val = "val"
-
-    # tb_log_dir = args.log_dir + "/" + args.title
-    # log_writer = SummaryWriter(log_dir=tb_log_dir)
+    args.test_or_val = "test"
 
     # Get all valid saved_models for the given title and sort by train_ep.
     checkpoints = [(f, f.split("_")) for f in os.listdir(args.save_model_dir)]
-    # changed to -5 for number of episodes, was -3 before
 
-    #checkpoint = []
-    # for (f, s) in checkpoints:
-    #     if type(s[-5]) is int:
-    #         epoch = s[-5]
-    #     else:
-    #         epoch = int(s[-3])
-    #     if len(int(epoch)) >= 4 and f.startswith(args.title) and f.endwith('.dat'):
-    #         checkpoint.append((f, epoch))
     checkpoints = [(f, int(s[-3])) for (f, s) in checkpoints
                    if len(s) >= 4 and f.startswith(args.title) and f.endswith('dat')]
-    #checkpoints = checkpoint
     checkpoints.sort(key=lambda x: x[1])
 
     best_model_on_val = None
@@ -50,7 +37,7 @@ def main():
         args.load_model = model
 
         # run eval on model
-        args.test_or_val = "val"
+        args.test_or_val = "test"
         main_eval(args, create_shared_model, init_agent)
 
         # check if best on val.
@@ -60,18 +47,6 @@ def main():
         if results["success"] > best_performance_on_val:
             best_model_on_val = model
             best_performance_on_val = results["success"]
-
-        # log_writer.add_scalar("val/success", results["success"], train_ep)
-        # log_writer.add_scalar("val/spl", results["spl"], train_ep)
-        #
-        # # run on test.
-        # args.test_or_val = "test"
-        # main_eval(args, create_shared_model, init_agent)
-        # with open(args.results_json, "r") as f:
-        #     results = json.load(f)
-        #
-        # log_writer.add_scalar("test/success", results["success"], train_ep)
-        # log_writer.add_scalar("test/spl", results["spl"], train_ep)
 
     args.test_or_val = "test"
     args.load_model = best_model_on_val

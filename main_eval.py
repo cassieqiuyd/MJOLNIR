@@ -110,9 +110,9 @@ def main_eval(args, create_shared_model, init_agent):
     with open(args.results_json, "w") as fp:
         json.dump(tracked_means, fp, sort_keys=True, indent=4)
 
-    with open('all_data_'+args.results_json, "a+") as f:
-        json.dump(args.load_model, f)
-        json.dump(tracked_means, f, sort_keys=True, indent=4)
+    # with open('all_data_'+args.results_json, "a+") as f:
+    #     json.dump(args.load_model, f)
+    #     json.dump(tracked_means, f, sort_keys=True, indent=4)
     
     if(args.room_results):
         with open('all_data_ba_'+args.results_json, "a+") as f:

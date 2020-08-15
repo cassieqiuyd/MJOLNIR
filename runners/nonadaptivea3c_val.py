@@ -34,7 +34,6 @@ def nonadaptivea3c_val(
     glove = Glove(args.glove_file)
     scenes, possible_targets, targets, rooms = get_data(args.scene_types, args.val_scenes) #mark3
     num = name_to_num(scene_type) #mark
-    print(rooms)
     scenes = scenes[num]
     targets = targets[num]
     rooms = rooms[num]   #mark2

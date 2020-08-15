@@ -73,7 +73,7 @@ class TestValEpisode(BasicEpisode):
         if args.verbose:
             print("Scene", scene, "Navigating towards:", self.target_object)
         if args.vis:
-            log = open('saved_action' + args.results_json + '.log', "a+")
+            log = open('saved_action_' + args.results_json[:-5] + '.log', "a+")
             sys.stdout = log
             print("Scene", scene, "Navigating towards:", self.target_object)
             print(self.environment.controller.state,self.environment.controller.state.y)

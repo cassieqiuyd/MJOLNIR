@@ -24,13 +24,14 @@ def normalize_adj(adj):
         #(d_mat_inv_sqrt @ adj @ d_mat_inv_sqrt).tocoo()
 
 
-class KGVN3(torch.nn.Module):
+class MJOLNIR_O(torch.nn.Module):
     def __init__(self, args):
         action_space = args.action_space
         hidden_state_sz = args.hidden_state_sz
-        super(KGVN3, self).__init__()
+        super(MJOLNIR_O, self).__init__()
 
         # get and normalize adjacency matrix.
+        np.seterr(divide='ignore')
         A_raw = torch.load("./data/gcn/adjmat.dat")
         A = normalize_adj(A_raw).tocsr().toarray()
         self.A = torch.nn.Parameter(torch.Tensor(A))
