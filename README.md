@@ -14,9 +14,9 @@ PyTorch implementation of our paper on target driven visual navigation in Ai2Tho
 
 ## Data
 
-The data can be found [here](https://drive.google.com/drive/folders/1TNkjWVDbagTgFalvHrwR_TbH3YG9GMhM?usp=sharing).(~ GB)
+The data and pretrained model can be found [here](https://drive.google.com/drive/folders/1i6V_t6TqaTpUdUFpOJT3y3KraJjak-sa?usp=sharing).(~ 15 GB)
 
-Please unzip it and put the data folder into the MJOLNIR folder.
+Please unzip them (~30GB) and put both folders into the MJOLNIR folder.
 
 ## Evaluation
 
