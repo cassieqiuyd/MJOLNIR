@@ -3,7 +3,7 @@
 Yiding Qiu*, Anwesan Pal* and Henrik I. Christensen
 
 
-PyTorch implementation of our paper on target driven visual navigation in Ai2Thor environment. This implementation is modified based on [Learning to Learn how to Learn: Self-Adaptive Visual Navigation using Meta-Learning](https://github.com/allenai/savn)
+PyTorch implementation of our paper in Ai2Thor environment. This implementation is modified based on [Learning to Learn how to Learn: Self-Adaptive Visual Navigation using Meta-Learning](https://github.com/allenai/savn)
 
 
 ## Prerequisite
