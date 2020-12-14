@@ -101,7 +101,7 @@ Please cite our work if you found this research useful for your work:
 
 ```bash
 @article{qiu2020learning,
-  title={Learning hierarchical relationships \for object-goal navigation},
+  title={Learning hierarchical relationships \text{for} object-goal navigation},
   author={Qiu, Yiding and Pal, Anwesan and Christensen, Henrik I},
   journal={arXiv preprint arXiv:2003.06749},
   year={2020}
