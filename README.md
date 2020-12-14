@@ -3,7 +3,7 @@
 Yiding Qiu*, Anwesan Pal* and Henrik I. Christensen
 
 
-PyTorch implementation of our paper in Ai2Thor environment. This implementation is modified based on [Learning to Learn how to Learn: Self-Adaptive Visual Navigation using Meta-Learning](https://github.com/allenai/savn)
+PyTorch implementation of our CoRL 2020 paper in AI2-THOR environment. This implementation is modified based on [Learning to Learn how to Learn: Self-Adaptive Visual Navigation using Meta-Learning](https://github.com/allenai/savn)
 
 
 ## Prerequisite
@@ -26,7 +26,7 @@ conda activate mjolnir_env
     git clone https://github.com/cassieqiuyd/MJOLNIR.git
 ```
 
-Note: Upon running any code the first time, the AI2THOR 3D scenes will be downloaded (~500MB) to your home directory. 
+Note: Upon running any code the first time, the AI2-THOR 3D scenes will be downloaded (~500MB) to your home directory. 
 
 ## Data
 
@@ -93,4 +93,17 @@ python full_eval.py \
     --save-model-dir trained_models
     
 cat mjolnir_o.json
+```
+
+## Citations
+
+Please cite our work if you found this research useful for your work:
+
+```bash
+@article{qiu2020learning,
+  title={Learning hierarchical relationships for object-goal navigation},
+  author={Qiu, Yiding and Pal, Anwesan and Christensen, Henrik I},
+  journal={arXiv preprint arXiv:2003.06749},
+  year={2020}
+}
 ```
