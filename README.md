@@ -2,8 +2,9 @@
 
 Yiding Qiu*, Anwesan Pal* and Henrik I. Christensen
 
+[Paper](https://arxiv.org/abs/2003.06749) | [Website](https://sites.google.com/eng.ucsd.edu/mjolnir) | [Video](https://www.youtube.com/watch?v=eCxWwohbOd8)
 
-PyTorch implementation of our CoRL 2020 paper in AI2-THOR environment. This implementation is modified based on [Learning to Learn how to Learn: Self-Adaptive Visual Navigation using Meta-Learning](https://github.com/allenai/savn)
+PyTorch implementation of our CoRL 2020 paper **Learning hierarchical relationships for object-goal navigation** in AI2-THOR environment. This implementation is modified based on [SAVN](https://github.com/allenai/savn).
 
 
 ## Prerequisite
