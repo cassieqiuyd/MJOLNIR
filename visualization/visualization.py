@@ -112,9 +112,8 @@ def img_bbx(args, event, action, obj_list, ep1, target_parents):
     img2 = cv2.UMat(img2)
     img2 = cv2.putText(img2, 'Goal: '+ep1[1], (20, 40), font, 1, blue, 2)
     img2 = cv2.putText(img2, 'Parent: ', (20, 100), font, 1, red, 2)
-    img2 = cv2.putText(img2, target_parents[0], (20, 140), font, 1, red, 2)
-    img2 = cv2.putText(img2, target_parents[1], (20, 170), font, 1, red, 2)
-    img2 = cv2.putText(img2, target_parents[2], (20, 200), font, 1, red, 2)
+    for tp_i, tp in enumerate(target_parents):
+        img2 = cv2.putText(img2, tp, (20, 140+tp_i*30), font, 1, red, 2)
 
     img2 = cv2.putText(img2, 'Success: '+ ep1[3], (20, 280), font, 1, black, 2)
 

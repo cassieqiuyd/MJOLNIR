@@ -12,7 +12,7 @@ MarkupSafe==1.1.1
 networkx==2.2
 numpy==1.16.2
 opencv-python==4.1.1.26
-Pillow==5.4.1
+Pillow==6.0.0
 progressbar2==3.39.3
 protobuf==3.7.0
 python-utils==2.3.0
