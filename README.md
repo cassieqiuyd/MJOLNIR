@@ -9,15 +9,15 @@ PyTorch implementation of our CoRL 2020 paper **Learning hierarchical relationsh
 
 ## Prerequisite
 
-1. The code has been implemented and tested on Ubuntu 16.04, python 3.5, PyTorch 0.4 and CUDA 10.1
+1. The code has been implemented and tested on Ubuntu 18.04, python 3.6, PyTorch 0.6 and CUDA 10.1
 2. (Recommended) Create a virtual environment using virtualenv or conda:
 ```
-virtualenv mjolnir_env --python=python3.5
+virtualenv mjolnir_env --python=python3.6
 source mjolnir_env/bin/activate
 ``` 
 
 ```
-conda create -n mjolnir_env python=3.5
+conda create -n mjolnir_env python=3.6
 conda activate mjolnir_env
 ```
 
@@ -83,6 +83,7 @@ python main.py \
     --vis False
     --save-model-dir trained_models
 ```
+Other model options are "SAVN" and "GCN"
 
 #### Full evaluation on training
 ```bash
