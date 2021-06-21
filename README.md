@@ -69,11 +69,12 @@ python kg_prep/make_adjacency.py
 ```
 
 This will generate the adjacency matrix file `adjmat.dat` file inside `MJOLNIR/kg_prep/kg_data/`. This is the same file which can be found inside `MJOLNIR/data/gcn` folder downloaded in the Data section.
-Note: If you want the adjacency matrix to be weighted, pass the --weighted argument to the above command line.
+
+Note: If you want the adjacency matrix to be weighted, pass the `--weighted` argument to the above command line.
 
 ## Evaluation
 
-Note: if you are not using gpu, you can remove the argument "--gpu-ids 0"
+Note: if you are not using gpu, you can remove the argument `--gpu-ids 0`
 
 #### Evaluate Pretrained model
 ```bash
