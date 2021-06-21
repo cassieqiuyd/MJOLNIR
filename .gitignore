@@ -4,3 +4,13 @@ data/thor_v1_offline_data
 runs/
 *.pyc
 .idea/
+kg_prep/data/relationships.json
+kg_prep/data/relationship_alias.txt
+kg_prep/verify_files.py
+kg_prep/data/all_objects.txt
+kg_prep/data/object_relationship_count.json
+kg_prep/data/relationship_count.json
+kg_prep/data/top_subject_relationships/
+kg_prep/data/adjmat.dat
+kg_prep/data/adjmat_w.dat
+kg_prep/data/old_adj/*

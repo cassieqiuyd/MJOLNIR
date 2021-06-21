@@ -37,8 +37,32 @@ The offline data can be found [here](https://drive.google.com/drive/folders/1i6V
 
 For training, please also download "train.zip" (~9 GB), and put all "Floorplan" folders into `MJOLNIR/data/thor_v1_offline_data`
 
+## Knowledge Graph construction
 
+1. Run the following script to generate the list of iThor v1.0.1 objects as a .txt file. Place it in `MJOLNIR/kg_prep/data/`.(ToDo)
 
+2. Download the [Visual Genome](https://visualgenome.org/) relationships file.
+```
+wget https://visualgenome.org/static/data/dataset/relationships.json.zip -P kg_prep/data/
+unzip kg_prep/data/relationships.json.zip -d kg_prep/data/ && rm -rf kg_prep/data/relationships.json.zip
+```
+
+3. Download the relationship aliases.
+```
+wget https://visualgenome.org/static/data/dataset/relationship_alias.txt -P kg_prep/data/
+```
+
+4. Run the relationship denoising step which will prune the object relationships of Visual-Genome dataset for the objects in iThor.
+```
+python kg_prep/kg_denoising.py
+```
+
+5. Generate adjacency matrix.
+```
+python kg_prep/make_adjacency.py
+```
+
+If you want the adjacency matrix to be weighted, pass the --weighted argument to the above command line.
 
 ## Evaluation
 
