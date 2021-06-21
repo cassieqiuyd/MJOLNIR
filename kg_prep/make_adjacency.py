@@ -1,7 +1,8 @@
 """
 Reads the connectivity graph of each object, and outputs an adjacency matrix to be used in the model.
 
-adjmat.dat - the adjacency matrix to be loaded by the model
+Returns
+adjmat.dat/adjmat_w.dat - the adjacency matrix to be loaded by the model
 """
 
 import argparse
@@ -35,7 +36,7 @@ def main(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--data_dir', type=str, default='kg_prep/data',
+    parser.add_argument('--data_dir', type=str, default='kg_prep/kg_data',
                         help="location of kg data directory")
     parser.add_argument('--weighted', default=False, action='store_true',
                         help="compute weighted adjacency matrix")

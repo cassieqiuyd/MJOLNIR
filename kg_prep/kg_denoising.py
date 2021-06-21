@@ -282,7 +282,7 @@ def main(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--data_dir', type=str, default='kg_prep/data',
+    parser.add_argument('--data_dir', type=str, default='kg_prep/kg_data',
                         help="location of kg data directory")
 
     args = parser.parse_args()
