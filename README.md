@@ -38,7 +38,7 @@ The offline data can be found [here](https://drive.google.com/drive/folders/1i6V
 For training, please also download "train.zip" (~9 GB), and put all "Floorplan" folders into `MJOLNIR/data/thor_v1_offline_data`
 
 ## Knowledge Graph construction (optional)
-Note: the knowledge graph is already provided in the data set downloaded from above. Following instruction is to show how the files are generated.
+Note: the knowledge graph is already provided in the data set downloaded from above. The following instructions show how these files are generated.
 
 1. Run the following script to generate the list of iThor v1.0.1 objects.
 ```
