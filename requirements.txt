@@ -10,7 +10,7 @@ itsdangerous==1.1.0
 Jinja2==2.11.3
 MarkupSafe==1.1.1
 networkx==2.2
-numpy==1.19.5
+numpy==1.22.0
 opencv-python==4.1.1.26
 Pillow==8.3.1
 progressbar2==3.39.3
